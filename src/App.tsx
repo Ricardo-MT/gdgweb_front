@@ -1,24 +1,39 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import axios from 'axios';
+import React, { FormEvent, useState } from 'react';
 
-function App() {
+const login = ({email, password}:{email: string, password: string}) => axios.post(process.env.REACT_APP_API_URL + "/authentication", {email, password})
+
+const App = () => {
+  const [state, setState] = useState<string | null>(null);
+
+  const handleLogin = (event : FormEvent<HTMLFormElement>) => {
+    event.stopPropagation()
+    event.preventDefault()
+    const email = event.currentTarget.email.value
+    const password = event.currentTarget.password.value
+    login({
+      email,
+      password,
+    }).then(res=>{
+      setState(res.data.user.name)
+    }).catch(err=>{
+      console.log(err)
+      setState("ERROR")
+    })
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+      {state? <p>User logged: {state}</p> : <p>No user logged</p>}
+      <form onSubmit={handleLogin}>
         <p>
-          Edit <code>src/App.tsx</code> and save to reload.
+          <input name='email' type="email" />
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <p>
+          <input name='password' type="password" />
+        </p>
+          <input type="submit" />
+      </form>
     </div>
   );
 }
