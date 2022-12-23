@@ -49,6 +49,10 @@ Este repositorio se configuró con la siguiente configuración del "settings.jso
 },
 }
 
+### TO-DO
+
+Prohibir relative imports.
+
 ## Antes de comenzar
 
 Antes de comenzar será necesario crear un archivo .env (Archivo de configuración de variables) en el root directory. En este archivo tendremos que poner las siguientes variables como mínimo:
