@@ -1,12 +1,36 @@
-# Getting Started with Create React App
+# Descripción del repositorio.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este repositorio contiene el proyecto web encargado de implementar el frontend del portal web de la comunidad GDG Algeciras. Está basado en React (y en un futuro apoyado por Nextjs), concretamente usando Create-React-App, y para el backend usamos el conjunto de herramientas formado por MongoDB, NodeJs y Express. 
 
-## Available Scripts
+## Antes de comenzar
 
-In the project directory, you can run:
+Antes de comenzar será necesario dentro del directorio /backend crear un archivo .env (Archivo de configuración de variables). En este archivo tendremos que poner las siguientes variables como mínimo:
 
-### `npm start`
+- REACT_APP_API_URL
+
+El valor de dichas variables será provisto por privado.
+
+## Una vez tenemos el proyecto configurado.
+
+### Instalar en tu ordenador NODE, MongoDB y YARN
+
+Instalar Node: [https://nodejs.org/en/download/](https://nodejs.org/en/download/).\
+Instalar MongoDB: [https://www.mongodb.com/docs/manual/administration/install-community/](https://www.mongodb.com/docs/manual/administration/install-community/).\
+
+### Ejecutar comando para instalar los paquetes
+
+En el directorio raiz, ejecutar el comando "npm install".
+
+### Ejecutar comandos para correr la web
+
+Para arancar el frontend, en la terminal moverse a la carpeta raiz y correr el siguiente comando:
+## `npm start`
+
+### Descripción Estructura
+
+Próximamente se seguirá actualizando este archivo.
+
+### `yarn start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -14,12 +38,12 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `npm test`
+### `yarn test`
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+### `yarn build`
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
@@ -29,7 +53,7 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+### `yarn eject`
 
 **Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
@@ -44,3 +68,27 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `yarn build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
