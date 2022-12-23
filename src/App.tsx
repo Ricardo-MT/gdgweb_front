@@ -1,18 +1,9 @@
-const App = ({ app }: { app?: string }) => {
+const App = () => {
   return (
-    <div
-      style={{
-        height: '100%',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-      }}
-    >
+    <div className='App'>
       <Marquee />
       <h1>GDG ALGECIRAS</h1>
       <h2>web en construcción</h2>
-      <button type='button'></button>
       <Marquee direction='right' />
     </div>
   );
@@ -25,13 +16,13 @@ const Marquee = ({
 }) => {
   return (
     <div
-      style={{ width: 600 }}
+      className='custom-width'
       dangerouslySetInnerHTML={{
         __html: `<marquee behavior=alternate direction=${direction} >
         gdg algeciras vaya comunidad más guapa los desarrolladores son unos
         mákinas sobre todo el oscar y el ricardo vaya cracks</marquee>`,
       }}
-    ></div>
+    />
   );
 };
 

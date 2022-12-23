@@ -14,8 +14,10 @@
     "plugin:react/jsx-runtime",
     "plugin:react-hooks/recommended"
   ],
+  "plugins": ["eslint-plugin-no-inline-styles"],
   "rules": {
     "@typescript-eslint/no-unused-vars": "off",
+    "no-inline-styles/no-inline-styles": 2,
     "semi": ["error", "always"],
     "max-len": ["error", { "code": 80 }],
     "react/no-array-index-key": "error",
@@ -23,6 +25,12 @@
     // MyComponent.displayName = 'MyComponent';
     "react/display-name": "error",
     "react/jsx-no-bind": "error",
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ],
     "react/button-has-type": [
       "error",
       {
