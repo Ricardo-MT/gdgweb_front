@@ -1,10 +1,57 @@
 # Descripción del repositorio.
 
-Este repositorio contiene el proyecto web encargado de implementar el frontend del portal web de la comunidad GDG Algeciras. Está basado en React (y en un futuro apoyado por Nextjs), concretamente usando Create-React-App, y para el backend usamos el conjunto de herramientas formado por MongoDB, NodeJs y Express. 
+Este repositorio contiene el proyecto web encargado de implementar el frontend del portal web de la comunidad GDG Algeciras. Está basado en React (y en un futuro apoyado por Nextjs), concretamente usando Create-React-App, y para el backend usamos el conjunto de herramientas formado por MongoDB, NodeJs y Express.
+
+## Configuración del editor (VSCode)
+
+Para una mejor experiencia con la refactorización del código y recomendaciones, instalar las extensiones "Prettier - Code formatter" y "ESLint" de VSCode.
+
+El objetivo es conseguir un alto standard de calidad y legibilidad del código. De esta manera distintos desarrolladores podrán colaborar más eficientemente.
+
+El código debe estar correctamente formateado antes de enviarlo a GitHub. Para eso se debe ejecutar el npm script "prettier", o incluso mejor, configurar el archivo "settings.json" del VSCode para que al guardar un archivo formatee el código automáticamente. Este es el archivo de preferencias de VSCode.
+Este repositorio se configuró con la siguiente configuración del "settings.json":
+
+{
+// Other configurations
+"typescript.format.insertSpaceAfterCommaDelimiter": true,
+  "eslint.validate": ["javascript", "javascriptreact", "typescriptreact"],
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+"[json]": {
+"editor.formatOnSave": true,
+"editor.quickSuggestions": {
+"strings": true
+},
+"editor.suggest.insertMode": "replace",
+"editor.defaultFormatter": "esbenp.prettier-vscode",
+},
+"[typescript]": {
+"editor.defaultFormatter": "esbenp.prettier-vscode",
+"editor.formatOnSave": true,
+"editor.formatOnPaste": true
+},
+"[javascript]": {
+"editor.defaultFormatter": "esbenp.prettier-vscode",
+"editor.formatOnSave": true,
+"editor.formatOnPaste": true,
+},
+"javascript.updateImportsOnFileMove.enabled": "always",
+"editor.guides.bracketPairs": true,
+"[jsonc]": {
+"editor.formatOnSave": true,
+"editor.defaultFormatter": "esbenp.prettier-vscode"
+},
+"[typescriptreact]": {
+"editor.defaultFormatter": "esbenp.prettier-vscode",
+"editor.formatOnSave": true,
+"editor.formatOnPaste": false
+},
+}
 
 ## Antes de comenzar
 
-Antes de comenzar será necesario dentro del directorio /backend crear un archivo .env (Archivo de configuración de variables). En este archivo tendremos que poner las siguientes variables como mínimo:
+Antes de comenzar será necesario crear un archivo .env (Archivo de configuración de variables) en el root directory. En este archivo tendremos que poner las siguientes variables como mínimo:
 
 - REACT_APP_API_URL
 
@@ -24,6 +71,7 @@ En el directorio raiz, ejecutar el comando "npm install".
 ### Ejecutar comandos para correr la web
 
 Para arancar el frontend, en la terminal moverse a la carpeta raiz y correr el siguiente comando:
+
 ## `npm start`
 
 ### Descripción Estructura
