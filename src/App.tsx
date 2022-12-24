@@ -1,3 +1,5 @@
+import type React from 'react';
+
 const App = () => {
   return (
     <div className='App'>
@@ -9,14 +11,13 @@ const App = () => {
   );
 };
 
-const Marquee = ({
-  direction,
-}: {
+const Marquee: React.FC<{
   direction?: 'left' | 'right' | 'up' | 'down';
-}) => {
+}> = ({ direction }) => {
   return (
     <div
       className='custom-width'
+      // eslint-disable-next-line react/no-danger
       dangerouslySetInnerHTML={{
         __html: `<marquee behavior=alternate direction=${direction} >
         gdg algeciras vaya comunidad más guapa los desarrolladores son unos
@@ -24,6 +25,10 @@ const Marquee = ({
       }}
     />
   );
+};
+
+Marquee.defaultProps = {
+  direction: 'left',
 };
 
 export default App;

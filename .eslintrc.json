@@ -9,14 +9,28 @@
     "react-app/jest",
     "eslint:recommended",
     "prettier",
+    "airbnb",
+    "airbnb-typescript",
     "plugin:prettier/recommended",
     "plugin:react/recommended",
     "plugin:react/jsx-runtime",
     "plugin:react-hooks/recommended"
   ],
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
   "plugins": ["eslint-plugin-no-inline-styles"],
   "rules": {
     "@typescript-eslint/no-unused-vars": "off",
+    "@typescript-eslint/no-use-before-define": "off",
+    "react/function-component-definition": [
+      "error",
+      {
+        "namedComponents": ["arrow-function"],
+        "unnamedComponents": ["function-expression"]
+      }
+    ],
+    "no-use-before-define": "off",
     "no-inline-styles/no-inline-styles": 2,
     "semi": ["error", "always"],
     "max-len": ["error", { "code": 80 }],
