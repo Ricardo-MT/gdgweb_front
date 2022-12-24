@@ -103,9 +103,17 @@ En **utils** irán módulos de utilidades, o cualquier otro servicio/lógica que
 
 ## Flujo de git
 
+**IMPORTANTE**
+
+Nunca se trabajará directamente sobre la rama **develop** o **main**.
+
+Nunca se hará un push directamente a la rama **main**.
+
 Cada vez que querramos implementar una funcionalidad se seguirán los siguientes pasos:
 
 - Checkout en la rama **develop**
+- Fetch origin para traer los cambios en remoto
+- Pull si hay cambios
 - Crear rama a partir de **develop** con nombre **feature/nombre-descriptivo-de-la-funcionalidad**
 - Trabajar sobre esa rama
 - Cuando se termine, publicar la rama **feature/nombre-descriptivo-de-la-funcionalidad**
