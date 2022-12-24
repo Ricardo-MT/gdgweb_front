@@ -18,7 +18,12 @@ Este repositorio se configuró con la siguiente configuración del "settings.jso
 {
   ... Other configurations,
   "typescript.format.insertSpaceAfterCommaDelimiter": true,
-  "eslint.validate": ["javascript", "javascriptreact", "typescriptreact"],
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
   "editor.codeActionsOnSave": {
     "source.fixAll": true
   },
@@ -67,7 +72,6 @@ El valor de dichas variables será provisto por privado.
 ### Instalar en tu ordenador NODE
 
 Instalar Node: [https://nodejs.org/en/download/](https://nodejs.org/en/download/).\
-Instalar MongoDB: [https://www.mongodb.com/docs/manual/administration/install-community/](https://www.mongodb.com/docs/manual/administration/install-community/).\
 
 ### Ejecutar comando para instalar los paquetes
 
