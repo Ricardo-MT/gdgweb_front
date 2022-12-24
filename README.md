@@ -11,7 +11,7 @@ El objetivo es conseguir un alto standard de calidad y legibilidad del código. 
 El código debe estar correctamente formateado antes de enviarlo a GitHub. Para eso se debe ejecutar el npm script "prettier", o incluso mejor, configurar el archivo "settings.json" del VSCode para que al guardar un archivo formatee el código automáticamente. Este es el archivo de preferencias de VSCode.
 Este repositorio se configuró con la siguiente configuración del "settings.json":
 
-```json
+```javascript
 {
   // Other configurations
   "typescript.format.insertSpaceAfterCommaDelimiter": true,
