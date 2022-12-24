@@ -8,8 +8,8 @@
     "react-app",
     "react-app/jest",
     "eslint:recommended",
-    "plugin:prettier/recommended",
     "prettier",
+    "plugin:prettier/recommended",
     "plugin:react/recommended",
     "plugin:react/jsx-runtime",
     "plugin:react-hooks/recommended"
@@ -31,34 +31,52 @@
         "endOfLine": "auto"
       }
     ],
+    "import/no-cycle": "error",
     "import/order": [
       "error",
       {
+        "newlines-between": "always",
         "groups": [
           "builtin",
           "external",
-          "parent",
-          "sibling",
-          "index",
-          "object",
+          "internal",
+          ["parent", "sibling", "index", "object"],
+          "unknown",
           "type"
         ],
         "pathGroups": [
           {
-            "pattern": "@/**/**",
-            "group": "parent",
-            "position": "before"
+            "pattern": "react",
+            "group": "builtin",
+            "position": "before",
+            "patternOptions": {
+              "nocomment": false
+            }
+          },
+          {
+            "pattern": "app/**",
+            "patternOptions": {
+              "nocomment": false
+            },
+            "group": "internal",
+            "position": "after"
           }
         ],
-        "alphabetize": { "order": "asc" }
+        "pathGroupsExcludedImportTypes": [],
+        // "distinctGroup": false,
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        },
+        "warnOnUnassignedImports": true
       }
     ],
-    // "no-restricted-imports": [
-    //   "error",
-    //   {
-    //     "patterns": ["../", "./"]
-    //   }
-    // ],
+    "no-restricted-imports": [
+      "error",
+      {
+        "patterns": ["../", "./"]
+      }
+    ],
     "@typescript-eslint/consistent-type-imports": [
       "error",
       {
