@@ -17,7 +17,7 @@
     "jsx": "react-jsx",
     "noUnusedLocals": false,
     "noUnusedParameters": false,
-    "baseUrl": "src"
+    "baseUrl": "."
   },
   "include": ["src"]
 }

@@ -19,10 +19,11 @@
   "parserOptions": {
     "project": "./tsconfig.json"
   },
-  "plugins": ["eslint-plugin-no-inline-styles"],
+  "plugins": ["eslint-plugin-no-inline-styles", "unused-imports"],
   "rules": {
     "@typescript-eslint/no-unused-vars": "off",
     "@typescript-eslint/no-use-before-define": "off",
+    "unused-imports/no-unused-imports": "error",
     "react/function-component-definition": [
       "error",
       {
@@ -31,6 +32,7 @@
       }
     ],
     "no-use-before-define": "off",
+    "no-plusplus": 0,
     "no-inline-styles/no-inline-styles": 2,
     "semi": ["error", "always"],
     "max-len": ["error", { "code": 80 }],
@@ -68,7 +70,7 @@
             }
           },
           {
-            "pattern": "app/**",
+            "pattern": "src/**",
             "patternOptions": {
               "nocomment": false
             },

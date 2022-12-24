@@ -1,10 +1,9 @@
 import React from 'react';
 
-import 'index.css';
 import ReactDOM from 'react-dom/client';
 
-// eslint-disable-next-line no-restricted-imports
-import App from './App';
+import App from 'src/App';
+import 'src/index.css';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
