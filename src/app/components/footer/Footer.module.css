@@ -6,9 +6,21 @@
     background-color: var(--primary);
     color: var(--accent);
     padding: 60px 30px;
-    display: flex;
+    /* display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; */
+    display: grid;
+    grid-template-areas: 'gdg social legal';
+    grid-template-columns: 32% 32% 32%;
+}
+.gdg_area{
+    grid-area: gdg;
+}
+.social_area{
+    grid-area: social;
+}
+.legal_area{
+    grid-area: legal;
 }
 .image{
     aspect-ratio: 1;
@@ -26,3 +38,19 @@
 .legal_text{
     text-align: right;
 }
+@media only screen and (max-width: 750px) {
+    .footer{
+        padding: 40px 20px;
+        grid-template-areas: 
+        'gdg legal'
+        'social social';
+        grid-template-columns: 50% 50%;
+        gap: 10px;
+    }
+    .h2{
+      font-size: 1.8rem;
+    }
+    .h3{
+      font-size: initial;
+    }
+  }

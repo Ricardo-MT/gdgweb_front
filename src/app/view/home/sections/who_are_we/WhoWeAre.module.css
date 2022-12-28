@@ -71,6 +71,8 @@
   }
   .textContainer{
     flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
   }
   .textContainer>*{
     margin: 5px;

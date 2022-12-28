@@ -26,7 +26,7 @@ const links = [
 const Footer = () => {
   return (
     <footer className={styles.footer}>
-      <div>
+      <div className={styles.gdg_area}>
         <h3 className={styles.h3}>
           Google
           <br />
@@ -35,7 +35,7 @@ const Footer = () => {
           Group
         </h3>
       </div>
-      <div>
+      <div className={styles.social_area}>
         <div>
           {links.map((link) => (
             <img
@@ -48,7 +48,7 @@ const Footer = () => {
         </div>
         <p>2022 - TODOS LOS DERECHOS RESERVADOS</p>
       </div>
-      <div>
+      <div className={styles.legal_area}>
         <p className={styles.legal_text}>Términos y condiciones</p>
         <p className={styles.legal_text}>Condiciones de uso</p>
         <p className={styles.legal_text}>Política de cookies</p>

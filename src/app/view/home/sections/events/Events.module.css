@@ -49,14 +49,23 @@
 .h2{
     font-size: min(calc(5vw), calc(2.5rem));
     font-family: var(--main-font);
-    text-align: right;
+    text-align: center;
     align-self: center;
 }
 .h3{
     font-size: min(calc(3vw), calc(1.25rem));
     font-family: var(--main-font);
-    text-align: right;
+    text-align: center;
     align-self: center;
+}
+
+@media only screen and (max-width: 750px) {
+  .h2{
+    font-size: 1.8rem;
+  }
+  .h3{
+    font-size: initial;
+  }
 }
 @keyframes scaleIn {
   from {
