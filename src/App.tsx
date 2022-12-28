@@ -1,7 +1,7 @@
-import HomePage from 'src/app/view/home/Home';
+import RoutesComponent from 'src/router/Router';
 
 const App = () => {
-  return <HomePage />;
+  return <RoutesComponent />;
 };
 
 export default App;
