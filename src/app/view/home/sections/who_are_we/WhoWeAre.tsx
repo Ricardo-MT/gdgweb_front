@@ -24,16 +24,18 @@ const WhoWeAre = () => {
         </h2>
       </div>
       <div className={styles.textContainer}>
-        <p>
-          Everyone has the right to an effective remedy by the competent
-          national tribunals for acts violating the fundamental rights granted
-          him by the constitution or by law.
-        </p>
-        <p>
-          Everyone has the right to an effective remedy by the competent
-          national tribunals for acts violating the fundamental rights granted
-          him by the constitution or by law.
-        </p>
+        <div className={styles.textContainerChild}>
+          <p>
+            Somos una comunidad tech donde compartimos una misma pasión por la
+            innovación. Estamos comprometidos a mantener el Campo de Gibraltar a
+            la vanguardia.
+          </p>
+          <p>
+            Esto lo conseguimos, en parte, divulgando las últimas tecnologías y
+            aprendiendo de ellas. Nos esforzamos por crear un entorno en el que
+            todos podamos contribuir.
+          </p>
+        </div>
       </div>
     </section>
   );

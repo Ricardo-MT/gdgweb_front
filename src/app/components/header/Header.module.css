@@ -60,12 +60,11 @@ li{
     position: fixed;
     top: 0;
     right: 0;
-    bottom: 0;
     left: 0;
     background-color: rgba(0, 0, 0, 0.3);
 }
 .Drawer__Back.isOpen{
-
+    bottom: 0;
 }
 .Drawer__Back.isClosed{
     background-color: rgba(0, 0, 0, 0);
@@ -84,6 +83,9 @@ li{
   }
   .isOpen {
     right: 0px;
+  }
+  .DrawerButton_Container{
+    cursor: pointer;
   }
   .Drawer__Container ul{
     display: flex;

@@ -6,29 +6,36 @@
     background-color: var(--primary);
     color: var(--accent);
     padding: 60px 30px;
-    /* display: flex;
-    align-items: center;
-    justify-content: space-between; */
     display: grid;
     grid-template-areas: 'gdg social legal';
     grid-template-columns: 32% 32% 32%;
+}
+.footer>*{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .gdg_area{
     grid-area: gdg;
 }
 .social_area{
+    align-items: center;
     grid-area: social;
 }
 .legal_area{
     grid-area: legal;
 }
+.social_area>ul{
+    flex-wrap: unset;
+    margin: 5px 10px;
+}
 .image{
     aspect-ratio: 1;
     width: 100%;
     height: 100%;
-    max-width: 40px;
+    max-width: 30px;
     object-fit: contain;
-    margin: 5px 10px;
+    margin: 0;
 }
 .h3{
     font-size: min(calc(3vw), calc(1.25rem));

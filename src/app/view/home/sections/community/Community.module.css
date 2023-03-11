@@ -38,8 +38,17 @@
     grid-area: textContainer;
     align-items: center;
 }
-.textContainer>p:nth-of-type(odd){
+.textContainerChild{
+  display: flex;
+  align-items: stretch;
+}
+.textContainerChild>p:nth-of-type(odd){
     font-weight: bold;
+}
+.textContainerChild>p{
+  margin: 5px;
+  flex: 1;
+  text-align: left;
 }
 .image>img{
     aspect-ratio: 1;
@@ -75,14 +84,19 @@
     align-items: stretch;
     justify-content: center;
   }
-  .textContainer>*{
-    margin: 5px;
+  .textContainerChild{
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+  }
+  .textContainerChild>p{
+    text-align: center;
   }
   .h1{
     font-size: 1.8rem;
   }
   .h2{
-    font-size: initial;
+    font-size: 1.6rem;
   }
 }
 @keyframes scaleIn {

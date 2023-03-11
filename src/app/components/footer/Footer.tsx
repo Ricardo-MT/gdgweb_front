@@ -4,25 +4,6 @@ import telegram from 'src/app/assets/telegram.png';
 import twitter from 'src/app/assets/twitter.png';
 import styles from 'src/app/components/footer/Footer.module.css';
 
-const links = [
-  {
-    image: facebook,
-    url: 'facebook',
-  },
-  {
-    image: linkedin,
-    url: 'linkedin',
-  },
-  {
-    image: twitter,
-    url: 'twitter',
-  },
-  {
-    image: telegram,
-    url: 'telegram',
-  },
-];
-
 const Footer = () => {
   return (
     <footer className={styles.footer}>
@@ -36,17 +17,24 @@ const Footer = () => {
         </h3>
       </div>
       <div className={styles.social_area}>
-        <div>
+        <ul>
           {links.map((link) => (
-            <img
-              src={link.image}
-              key={link.url}
-              className={styles.image}
-              alt=''
-            />
+            <li key={link.url}>
+              <a
+                href={link.url}
+                target='_blank'
+                rel='noreferrer'
+              >
+                <img
+                  src={link.image}
+                  className={styles.image}
+                  alt={`Nuestra comunidad en ${link.name}`}
+                />
+              </a>
+            </li>
           ))}
-        </div>
-        <p>2022 - TODOS LOS DERECHOS RESERVADOS</p>
+        </ul>
+        <p>2023 - TODOS LOS DERECHOS RESERVADOS</p>
       </div>
       <div className={styles.legal_area}>
         <p className={styles.legal_text}>Términos y condiciones</p>
@@ -58,3 +46,26 @@ const Footer = () => {
 };
 
 export default Footer;
+
+const links = [
+  {
+    name: 'Facebook',
+    image: facebook,
+    url: 'https://www.facebook.com/gdgalgeciras',
+  },
+  {
+    name: 'LinkedIn',
+    image: linkedin,
+    url: 'https://www.linkedin.com/groups/9065708/',
+  },
+  {
+    name: 'Twitter',
+    image: twitter,
+    url: 'https://twitter.com/AlgecirasGdg',
+  },
+  {
+    name: 'Telegram',
+    image: telegram,
+    url: 'https://t.me/+-Rt6dIwkm8hhZDdk',
+  },
+];

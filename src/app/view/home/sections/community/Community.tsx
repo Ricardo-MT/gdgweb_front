@@ -24,16 +24,18 @@ const Community = () => {
         </h2>
       </div>
       <div className={styles.textContainer}>
-        <p>
-          Everyone has the right to an effective remedy by the competent
-          national tribunals for acts violating the fundamental rights granted
-          him by the constitution or by law.
-        </p>
-        <p>
-          Everyone has the right to an effective remedy by the competent
-          national tribunals for acts violating the fundamental rights granted
-          him by the constitution or by law.
-        </p>
+        <div className={styles.textContainerChild}>
+          <p>
+            Nuestra comunidad se ha convertido en un área de aprendizaje mutuo y
+            colaboración, donde profesionales con experiencias varias
+            intercambian conocimientos para mejorar su base de habilidades.
+          </p>
+          <p>
+            Con foros de discusión, tutoriales y proyectos conjuntos, los
+            miembros de la comunidad comparten compromisos comunes y construyen
+            nuevas amistades.
+          </p>
+        </div>
       </div>
     </section>
   );

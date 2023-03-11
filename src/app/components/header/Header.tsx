@@ -82,7 +82,7 @@ const DrawerButton = ({ onClick }: { onClick: () => void }) => (
   <div
     role='button'
     tabIndex={0}
-    className='DrawerButton_Container'
+    className={styles.DrawerButton_Container}
     onClick={onClick}
     onKeyDown={onClick}
   >
@@ -147,12 +147,12 @@ const links = [
     url: PATHS.project,
   },
   {
-    label: 'Ediciones',
-    url: PATHS.editions,
-  },
-  {
     label: 'Colaboradores',
     url: PATHS.partners,
+  },
+  {
+    label: 'Ediciones',
+    url: PATHS.editions,
   },
   {
     label: 'Contacto',
