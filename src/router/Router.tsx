@@ -42,7 +42,7 @@ const getRouter = ({ editionRepository }: RepositoryValues) => {
       element: <EditionsPage />,
       loader: () => {
         console.log('INSIDE LOADER ALL EDITIONS');
-        return editionRepository.getNextEvent();
+        return editionRepository.getEditionById('63d3b58cbf8afa3360f4a7ad');
       },
     },
     {
@@ -58,15 +58,6 @@ const getRouter = ({ editionRepository }: RepositoryValues) => {
       path: PATHS.partners,
       errorElement: <ErrorBoundary />,
       element: <PartnersPage />,
-    },
-    {
-      path: `${PATHS.partners}/:partnerId`,
-      errorElement: <ErrorBoundary />,
-      element: <p>Illo que pasa</p>,
-      loader: ({ params }) => {
-        console.log('PARTNER LOADER');
-        return null;
-      },
     },
     {
       path: PATHS.contact,
