@@ -30,7 +30,7 @@ class EditionServices extends BaseEditionService {
   async getEditionById(id: string): Promise<IEdition> {
     const {
       data: { edition },
-    } = await this.apiClient.get(`${this.route}/getById/${id}`);
+    } = await this.apiClient.get(`${this.route}/getById?id=${id}`);
     console.log('Returning the service', edition, id);
 
     return edition;
