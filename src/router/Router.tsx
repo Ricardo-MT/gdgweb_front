@@ -60,6 +60,15 @@ const getRouter = ({ editionRepository }: RepositoryValues) => {
       element: <PartnersPage />,
     },
     {
+      path: `${PATHS.partners}/:partnerId`,
+      errorElement: <ErrorBoundary />,
+      element: <p>Illo que pasa</p>,
+      loader: ({ params }) => {
+        console.log('PARTNER LOADER');
+        return editionRepository.getEditionById(String(params.partnerId));
+      },
+    },
+    {
       path: PATHS.contact,
       errorElement: <ErrorBoundary />,
       element: <ContactPage />,
