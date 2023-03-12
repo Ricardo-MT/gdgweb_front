@@ -45,7 +45,7 @@ const getRouter = ({ editionRepository }: RepositoryValues) => {
       path: `${PATHS.editions}/:editionId`,
       element: <EditionDetailPage />,
       errorElement: <ErrorBoundary />,
-      loader: async ({ params }) => {
+      loader: ({ params }) => {
         console.log('INSIDE LOADER');
         return editionRepository.getEditionById(String(params.editionId));
       },
