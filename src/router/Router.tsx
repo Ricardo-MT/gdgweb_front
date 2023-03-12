@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
 
-import { createBrowserRouter, RouterProvider, Navigate } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider, Navigate, useRouteError } from 'react-router-dom';
 
 import type { RepositoryValues } from 'src/app/contexts/repositories/repositoriesContext';
 import { useRepositoryContext } from 'src/app/contexts/repositories/repositoriesContext';
@@ -16,7 +16,8 @@ const getRouter = ({ editionRepository }: RepositoryValues) => {
   return createBrowserRouter([
     {
       path: PATHS.root,
-      errorElement: <p>Ups</p>,
+      hasErrorBoundary: true,
+      errorElement: <ErrorBoundary />,
       element: (
         <Navigate
           to={PATHS.home}
@@ -39,7 +40,7 @@ const getRouter = ({ editionRepository }: RepositoryValues) => {
     {
       path: `${PATHS.editions}/:editionId`,
       element: <EditionDetailPage />,
-      // errorElement: <p>Ups Detail</p>,
+      errorElement: <ErrorBoundary />,
       loader: async ({ params }) => editionRepository.getEditionById(String(params.editionId)),
     },
     {
@@ -60,3 +61,10 @@ const RoutesComponent = () => {
 };
 
 export default RoutesComponent;
+
+const ErrorBoundary = () => {
+  const error = useRouteError();
+  console.error(error);
+  // Uncaught ReferenceError: path is not defined
+  return <div>Dang!</div>;
+};
