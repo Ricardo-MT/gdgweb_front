@@ -40,6 +40,10 @@ const getRouter = ({ editionRepository }: RepositoryValues) => {
       path: PATHS.editions,
       errorElement: <ErrorBoundary />,
       element: <EditionsPage />,
+      loader: () => {
+        console.log('INSIDE LOADER ALL EDITIONS');
+        return editionRepository.getNextEvent();
+      },
     },
     {
       path: `${PATHS.editions}/:editionId`,

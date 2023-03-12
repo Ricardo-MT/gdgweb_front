@@ -27,6 +27,7 @@ class EditionRepository extends AbstractEditionRepository {
   }
 
   async getNextEvent(): Promise<IEdition> {
+    console.log('FETCHING NEXT');
     return this.editionService.getNextEvent();
   }
 }

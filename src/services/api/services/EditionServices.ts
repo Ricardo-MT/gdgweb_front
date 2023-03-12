@@ -40,6 +40,8 @@ class EditionServices extends BaseEditionService {
     const {
       data: { edition },
     } = await this.apiClient.get(`${this.route}/getNextEdition`);
+    console.log('SERVICE NEXT', edition);
+
     return edition;
   }
 }
