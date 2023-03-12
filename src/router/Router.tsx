@@ -46,7 +46,7 @@ const getRouter = ({ editionRepository }: RepositoryValues) => {
       },
     },
     {
-      path: `${PATHS.editions}/:editionId`,
+      path: `${PATHS.editionDetail}/:editionId`,
       element: <EditionDetailPage />,
       errorElement: <ErrorBoundary />,
       loader: ({ params }) => {
@@ -65,7 +65,7 @@ const getRouter = ({ editionRepository }: RepositoryValues) => {
       element: <p>Illo que pasa</p>,
       loader: ({ params }) => {
         console.log('PARTNER LOADER');
-        return editionRepository.getEditionById(String(params.partnerId));
+        return null;
       },
     },
     {

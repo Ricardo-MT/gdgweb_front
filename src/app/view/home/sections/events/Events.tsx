@@ -30,7 +30,7 @@ const Events = () => {
         {nextEvent && (
           <>
             <span>{new Date(nextEvent.date).toLocaleDateString()}</span>
-            <NavLink to={`${PATHS.editions}/${nextEvent._id}`}>ver detalles</NavLink>
+            <NavLink to={`${PATHS.editionDetail}/${nextEvent._id}`}>ver detalles</NavLink>
           </>
         )}
       </div>
@@ -42,7 +42,7 @@ const Events = () => {
           <NavLink
             className={styles.event_item}
             key={date}
-            to={`${PATHS.editions}/${_id}`}
+            to={`${PATHS.editionDetail}/${_id}`}
           >
             <img
               className={styles.image}

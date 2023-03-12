@@ -19,7 +19,7 @@ const EditionListItem = ({ edition }: EditionListItemType) => {
       </div>
       <div className={cssRules.body}>
         <p className={cssRules.oneLineNoOverflow}>{description}</p>
-        <NavLink to={`${PATHS.editions}/${_id}`}>ver detalles</NavLink>
+        <NavLink to={`${PATHS.editionDetail}/${_id}`}>ver detalles</NavLink>
       </div>
       <div className={cssRules.footer}>
         <p className={cssRules.oneLineNoOverflow}>
