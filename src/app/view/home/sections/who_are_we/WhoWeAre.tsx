@@ -26,14 +26,12 @@ const WhoWeAre = () => {
       <div className={styles.textContainer}>
         <div className={styles.textContainerChild}>
           <p>
-            Somos una comunidad tech donde compartimos una misma pasión por la
-            innovación. Estamos comprometidos a mantener el Campo de Gibraltar a
-            la vanguardia.
+            Somos una comunidad tech donde compartimos una misma pasión por la innovación. Estamos comprometidos a
+            mantener el Campo de Gibraltar a la vanguardia.
           </p>
           <p>
-            Esto lo conseguimos, en parte, divulgando las últimas tecnologías y
-            aprendiendo de ellas. Nos esforzamos por crear un entorno en el que
-            todos podamos contribuir.
+            Esto lo conseguimos, en parte, divulgando las últimas tecnologías y aprendiendo de ellas. Nos esforzamos por
+            crear un entorno en el que todos podamos contribuir.
           </p>
         </div>
       </div>
