@@ -13,6 +13,8 @@ import ProjectPage from 'src/app/view/project/Project';
 import PATHS from 'src/router/routes';
 
 const getRouter = ({ editionRepository }: RepositoryValues) => {
+  console.log('CREATING THE ROUTER');
+
   return createBrowserRouter([
     {
       path: PATHS.root,
@@ -43,7 +45,10 @@ const getRouter = ({ editionRepository }: RepositoryValues) => {
       path: `${PATHS.editions}/:editionId`,
       element: <EditionDetailPage />,
       errorElement: <ErrorBoundary />,
-      loader: ({ params }) => editionRepository.getEditionById(String(params.editionId)),
+      loader: async ({ params }) => {
+        console.log('INSIDE LOADER');
+        return editionRepository.getEditionById(String(params.editionId));
+      },
     },
     {
       path: PATHS.partners,

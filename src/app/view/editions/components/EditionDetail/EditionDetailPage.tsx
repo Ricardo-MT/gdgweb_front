@@ -16,6 +16,7 @@ import type { IEdition } from 'src/interfaces/IEdition';
  */
 const EditionDetailPage = ({ children }: EditionDetailPageType) => {
   const data = useLoaderData();
+  console.log('DATA', data);
 
   return (
     <EditionDetailProvider edition={(data as IEdition) || null}>
