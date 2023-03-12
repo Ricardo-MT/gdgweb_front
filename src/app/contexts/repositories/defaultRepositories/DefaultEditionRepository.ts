@@ -13,6 +13,8 @@ class DefaultEditionRepository extends AbstractEditionRepository {
   }
 
   async getEditionById(id: string): Promise<IEdition> {
+    console.log('Umnju, not implemented');
+
     throw new NotImplementedError();
   }
 

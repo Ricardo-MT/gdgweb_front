@@ -16,6 +16,7 @@ const getRouter = ({ editionRepository }: RepositoryValues) => {
   return createBrowserRouter([
     {
       path: PATHS.root,
+      errorElement: <p>Ups</p>,
       element: (
         <Navigate
           to={PATHS.home}
@@ -38,6 +39,7 @@ const getRouter = ({ editionRepository }: RepositoryValues) => {
     {
       path: `${PATHS.editions}/:editionId`,
       element: <EditionDetailPage />,
+      // errorElement: <p>Ups Detail</p>,
       loader: async ({ params }) => editionRepository.getEditionById(String(params.editionId)),
     },
     {
