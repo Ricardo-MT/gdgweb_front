@@ -20,8 +20,10 @@ class EditionRepository extends AbstractEditionRepository {
 
   async getEditionById(id: string): Promise<IEdition> {
     console.log('FETCHING THE REPOSITORY');
+    const res = await this.editionService.getEditionById(id);
+    console.log('DONE', res);
 
-    return this.editionService.getEditionById(id);
+    return res;
   }
 
   async getNextEvent(): Promise<IEdition> {
