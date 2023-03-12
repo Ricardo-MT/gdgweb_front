@@ -2,7 +2,7 @@ const PATHS = {
   root: '/',
   home: '/home',
   project: '/project',
-  editions: '/editions',
+  editions: '/events',
   partners: '/partners',
   contact: '/contact',
 };
