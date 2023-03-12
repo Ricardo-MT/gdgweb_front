@@ -21,6 +21,7 @@
   },
   "plugins": ["eslint-plugin-no-inline-styles", "unused-imports"],
   "rules": {
+    "no-underscore-dangle": "off",
     "@typescript-eslint/no-unused-vars": "off",
     "@typescript-eslint/no-use-before-define": "off",
     "unused-imports/no-unused-imports": "error",
@@ -35,7 +36,7 @@
     "no-plusplus": 0,
     "no-inline-styles/no-inline-styles": 2,
     "semi": ["error", "always"],
-    "max-len": ["error", { "code": 80 }],
+    "max-len": ["error", { "code": 120 }],
     "react/no-array-index-key": "error",
     // const MyComponent = React.memo(() => { ... });
     // MyComponent.displayName = 'MyComponent';
@@ -52,14 +53,7 @@
       "error",
       {
         "newlines-between": "always",
-        "groups": [
-          "builtin",
-          "external",
-          "internal",
-          ["parent", "sibling", "index", "object"],
-          "unknown",
-          "type"
-        ],
+        "groups": ["builtin", "external", "internal", ["parent", "sibling", "index", "object"], "unknown", "type"],
         "pathGroups": [
           {
             "pattern": "react",

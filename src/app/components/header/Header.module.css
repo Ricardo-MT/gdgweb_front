@@ -1,6 +1,8 @@
 header{
     font-family: var(--main-font);
     position: fixed;
+    box-sizing: border-box;
+    height: var(--header-height);
     top: 0;
     right: 0;
     left: 0;
@@ -44,7 +46,7 @@ header.hidden{
 ul{
     display: inline-flex;
     flex-wrap: wrap;
-    justify-content: end;
+    justify-content: flex-end;
     list-style-type: none;
 }
 

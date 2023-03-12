@@ -10,6 +10,7 @@
   --third-section: #FFF;
   --fourth-section: #92d1b5;
   --fifth-section: #FFF;
+  --header-height: 84px;
 }
 * {
   margin: 0;
@@ -31,13 +32,12 @@ body {
 }
 #root {
   flex: 1;
-  /* overflow: scroll; */
   overflow-x: hidden;
   overflow-y: scroll;
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
-#root::-webkit-scrollbar { /* WebKit */
+#root::-webkit-scrollbar {
   width: 0;
   height: 0;
   display: none;

@@ -5,7 +5,6 @@ import { Link, NavLink } from 'react-router-dom';
 
 import menu from 'src/app/assets/bars-solid.svg';
 import styles from 'src/app/components/header/Header.module.css';
-// eslint-disable-next-line max-len
 import useScrollDirection from 'src/app/components/header/hooks/useScrollDirection';
 import useWindowSize from 'src/app/components/header/hooks/useWindowSize';
 import PATHS from 'src/router/routes';
@@ -30,21 +29,12 @@ const DeskHeader = () => {
           </Link>
         </span>
         <ul>
-          {links.map((link) => (
-            <li key={link.url}>
-              <NavLink
-                className={({ isActive }) =>
-                  `${styles.header_link} ${
-                    isActive
-                      ? styles.header_link_active
-                      : styles.header_link_inactive
-                  }`
-                }
-                to={link.url}
-              >
-                {link.label}
-              </NavLink>
-            </li>
+          {links.map(({ url, label }) => (
+            <DrawerLinkItem
+              key={url}
+              url={url}
+              label={label}
+            />
           ))}
         </ul>
       </nav>
@@ -97,43 +87,47 @@ const DrawerButton = ({ onClick }: { onClick: () => void }) => (
 
 const DrawerContents = () => (
   <ul>
-    {links.map((link) => (
-      <li key={link.url}>
-        <NavLink
-          className={({ isActive }) =>
-            `${styles.header_link} ${
-              isActive ? styles.header_link_active : styles.header_link_inactive
-            }`
-          }
-          to={link.url}
-        >
-          {link.label}
-        </NavLink>
-      </li>
+    {links.map(({ url, label }) => (
+      <DrawerLinkItem
+        key={url}
+        url={url}
+        label={label}
+      />
     ))}
   </ul>
 );
-const Drawer = ({
-  isOpen,
-  handleClose,
-}: {
-  isOpen: boolean;
-  handleClose: () => void;
-}) => (
+const Drawer = ({ isOpen, handleClose }: { isOpen: boolean; handleClose: () => void }) => (
   <>
     <div
       role='banner'
       onClick={handleClose}
       onKeyDown={handleClose}
-      className={`${styles.Drawer__Back} ${
-        isOpen ? styles.isOpen : styles.isClosed
-      }`}
+      className={`${styles.Drawer__Back} ${isOpen ? styles.isOpen : styles.isClosed}`}
     />
     <div className={`${styles.Drawer__Container} ${isOpen && styles.isOpen}`}>
       <DrawerContents />
     </div>
   </>
 );
+
+const DrawerLinkItem = ({ url, label }: { url: string; label: string }) => {
+  return (
+    <li>
+      <NavLink
+        className={({ isActive }) => {
+          const classes = styles.header_link;
+          if (isActive) {
+            return `${classes} ${styles.header_link_active}`;
+          }
+          return `${classes} ${styles.header_link_inactive}`;
+        }}
+        to={url}
+      >
+        {label}
+      </NavLink>
+    </li>
+  );
+};
 
 export default Header;
 
