@@ -16,7 +16,6 @@ const getRouter = ({ editionRepository }: RepositoryValues) => {
   return createBrowserRouter([
     {
       path: PATHS.root,
-      hasErrorBoundary: true,
       errorElement: <ErrorBoundary />,
       element: (
         <Navigate
@@ -27,28 +26,33 @@ const getRouter = ({ editionRepository }: RepositoryValues) => {
     },
     {
       path: PATHS.home,
+      errorElement: <ErrorBoundary />,
       element: <HomePage />,
     },
     {
       path: PATHS.project,
+      errorElement: <ErrorBoundary />,
       element: <ProjectPage />,
     },
     {
       path: PATHS.editions,
+      errorElement: <ErrorBoundary />,
       element: <EditionsPage />,
     },
     {
       path: `${PATHS.editions}/:editionId`,
       element: <EditionDetailPage />,
       errorElement: <ErrorBoundary />,
-      loader: async ({ params }) => editionRepository.getEditionById(String(params.editionId)),
+      loader: ({ params }) => editionRepository.getEditionById(String(params.editionId)),
     },
     {
       path: PATHS.partners,
+      errorElement: <ErrorBoundary />,
       element: <PartnersPage />,
     },
     {
       path: PATHS.contact,
+      errorElement: <ErrorBoundary />,
       element: <ContactPage />,
     },
   ]);
