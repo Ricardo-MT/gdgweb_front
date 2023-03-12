@@ -1,11 +1,11 @@
-.listContainer{
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    max-width: 800px;
-    padding: 0px 30px 20px;
-    overflow: hidden;
+.listContainer {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  max-width: 800px;
+  padding: 0px 30px 20px;
+  overflow: hidden;
 }
-.listContainer>*{
-    margin-bottom: 20px;
+.listContainer > * {
+  margin-bottom: 20px;
 }

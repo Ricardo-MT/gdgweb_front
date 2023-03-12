@@ -1,4 +1,13 @@
-.container{
-    background: linear-gradient(var(--first-section) 0%, var(--first-section) 20%, var(--second-section) 20%, var(--second-section) 40%, var(--third-section) 40%, var(--third-section) 60%, var(--fourth-section) 60%, var(--fourth-section) 100%);
-    /* background: radial-gradient(circle at 50% 100%, var(--fourth-section) 25%, var(--fourth-section) 40%, var(--third-section) 45%, var(--third-section) 60%, var(--second-section) 65%, var(--second-section) 80%, var(--first-section) 85%); */
+.container {
+  background: linear-gradient(
+    var(--first-section) 0%,
+    var(--first-section) 20%,
+    var(--second-section) 20%,
+    var(--second-section) 40%,
+    var(--third-section) 40%,
+    var(--third-section) 60%,
+    var(--fourth-section) 60%,
+    var(--fourth-section) 100%
+  );
+  /* background: radial-gradient(circle at 50% 100%, var(--fourth-section) 25%, var(--fourth-section) 40%, var(--third-section) 45%, var(--third-section) 60%, var(--second-section) 65%, var(--second-section) 80%, var(--first-section) 85%); */
 }

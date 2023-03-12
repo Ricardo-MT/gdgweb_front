@@ -35,7 +35,7 @@
   flex-direction: column;
   align-items: stretch;
 }
-.footer span{
+.footer span {
   font-weight: bold;
 }
 .oneLineNoOverflow {
@@ -45,7 +45,7 @@
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-.underline{
+.underline {
   text-decoration: underline;
   text-decoration-thickness: 2px;
 }
